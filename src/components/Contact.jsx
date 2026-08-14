@@ -1,0 +1,353 @@
+import { useState } from "react";
+import { motion } from "framer-motion";
+
+function Contact() {
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+
+  const handleChange = (event) => {
+    setForm({
+      ...form,
+      [event.target.name]: event.target.value,
+    });
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    const body = encodeURIComponent(
+      `Name: ${form.name}\nEmail: ${form.email}\n\n${form.message}`
+    );
+
+    window.location.href = `mailto:your@email.com?subject=${encodeURIComponent(
+      form.subject
+    )}&body=${body}`;
+  };
+
+  return (
+    <section id="contact" className="section contact">
+      <div className="container">
+
+        {/* =========================
+            SECTION HEADING
+        ========================= */}
+
+        <motion.div
+          className="section-heading"
+          initial={{
+            opacity: 0,
+            y: 30,
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+          }}
+          viewport={{
+            once: true,
+          }}
+          transition={{
+            duration: 0.6,
+          }}
+        >
+          <span>08</span>
+
+          <h2>Let's Work Together</h2>
+
+          <p>Have a project in mind?</p>
+        </motion.div>
+
+        {/* =========================
+            CONTACT GRID
+        ========================= */}
+
+        <div className="contact-grid">
+
+          {/* =========================
+              LEFT SIDE
+          ========================= */}
+
+          <motion.div
+            className="contact-info"
+            initial={{
+              opacity: 0,
+              x: -50,
+            }}
+            whileInView={{
+              opacity: 1,
+              x: 0,
+            }}
+            viewport={{
+              once: true,
+            }}
+            transition={{
+              duration: 0.7,
+            }}
+          >
+
+            {/* Availability */}
+
+            <div className="availability">
+              <span className="availability-dot" />
+              Available for new projects
+            </div>
+
+            <span className="contact-small-title">
+              GET IN TOUCH
+            </span>
+
+            <h3>
+              Let's build something
+              <span> amazing.</span>
+            </h3>
+
+            <p className="contact-description">
+              I'm always interested in discussing new projects,
+              creative ideas and opportunities. Let's turn your
+              idea into a powerful digital experience.
+            </p>
+
+            {/* Contact Items */}
+
+            <div className="contact-details">
+
+              {/* Email */}
+
+              <motion.a
+                href="mailto:your@email.com"
+                className="contact-item"
+                whileHover={{
+                  x: 6,
+                }}
+              >
+                <div className="contact-item-icon">
+                  <i className="fas fa-envelope" />
+                </div>
+
+                <div>
+                  <span>Email</span>
+
+                  <strong>
+                    your@email.com
+                  </strong>
+                </div>
+
+                <i className="fas fa-arrow-up-right-from-square contact-arrow" />
+              </motion.a>
+
+              {/* Location */}
+
+              <div className="contact-item">
+                <div className="contact-item-icon">
+                  <i className="fas fa-map-marker-alt" />
+                </div>
+
+                <div>
+                  <span>Location</span>
+
+                  <strong>
+                    Pakistan
+                  </strong>
+                </div>
+              </div>
+
+              {/* Availability */}
+
+              <div className="contact-item">
+                <div className="contact-item-icon">
+                  <i className="fas fa-clock" />
+                </div>
+
+                <div>
+                  <span>Response Time</span>
+
+                  <strong>
+                    Usually within 24 hours
+                  </strong>
+                </div>
+              </div>
+
+            </div>
+
+          </motion.div>
+
+          {/* =========================
+              RIGHT FORM
+          ========================= */}
+
+          <motion.form
+            className="contact-form"
+            onSubmit={handleSubmit}
+            initial={{
+              opacity: 0,
+              x: 50,
+            }}
+            whileInView={{
+              opacity: 1,
+              x: 0,
+            }}
+            viewport={{
+              once: true,
+            }}
+            transition={{
+              duration: 0.7,
+            }}
+          >
+
+            <div className="form-heading">
+              <div>
+                <span>START A PROJECT</span>
+
+                <h3>
+                  Tell me about your idea
+                </h3>
+              </div>
+
+              <div className="form-icon">
+                <i className="fas fa-paper-plane" />
+              </div>
+            </div>
+
+            {/* Name + Email */}
+
+            <div className="form-row">
+
+              <div className="input-group">
+                <label>
+                  Your Name
+                </label>
+
+                <div className="input-wrapper">
+                  <i className="fas fa-user" />
+
+                  <input
+                    name="name"
+                    placeholder="John Doe"
+                    value={form.name}
+                    onChange={handleChange}
+                    required
+                  />
+                </div>
+              </div>
+
+              <div className="input-group">
+                <label>
+                  Email Address
+                </label>
+
+                <div className="input-wrapper">
+                  <i className="fas fa-envelope" />
+
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="john@example.com"
+                    value={form.email}
+                    onChange={handleChange}
+                    required
+                  />
+                </div>
+              </div>
+
+            </div>
+
+            {/* Subject */}
+
+            <div className="input-group">
+              <label>
+                Subject
+              </label>
+
+              <div className="input-wrapper">
+                <i className="fas fa-tag" />
+
+                <input
+                  name="subject"
+                  placeholder="Project Discussion"
+                  value={form.subject}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+            </div>
+
+            {/* Message */}
+
+            <div className="input-group">
+              <label>
+                Message
+              </label>
+
+              <div className="textarea-wrapper">
+                <i className="fas fa-comment-dots" />
+
+                <textarea
+                  name="message"
+                  rows="6"
+                  placeholder="Tell me about your project..."
+                  value={form.message}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+            </div>
+
+            {/* Submit */}
+
+            <motion.button
+              className="contact-submit"
+              type="submit"
+              whileHover={{
+                y: -3,
+              }}
+              whileTap={{
+                scale: 0.97,
+              }}
+            >
+              <span>
+                Send Message
+              </span>
+
+              <div className="submit-icon">
+                <i className="fas fa-arrow-right" />
+              </div>
+            </motion.button>
+
+          </motion.form>
+
+        </div>
+
+        {/* =========================
+            BOTTOM
+        ========================= */}
+
+        <motion.div
+          className="contact-bottom"
+          initial={{
+            opacity: 0,
+            y: 20,
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+          }}
+          viewport={{
+            once: true,
+          }}
+        >
+          <i className="fas fa-code" />
+
+          <span>
+            Have an idea? Let's turn it into reality.
+          </span>
+        </motion.div>
+
+      </div>
+    </section>
+  );
+}
+
+export default Contact;
