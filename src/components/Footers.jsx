@@ -59,7 +59,7 @@ useEffect(() => {
             <div className="footer-socials">
 
               <a
-                href="https://github.com/"
+                href="https://github.com/cryptonfuture"
                 target="_blank"
                 rel="noreferrer"
                 aria-label="GitHub"
@@ -68,7 +68,7 @@ useEffect(() => {
               </a>
 
               <a
-                href="https://linkedin.com/"
+                href="https://www.linkedin.com/in/asad-akbar-1890892b2/"
                 target="_blank"
                 rel="noreferrer"
                 aria-label="LinkedIn"
@@ -77,7 +77,7 @@ useEffect(() => {
               </a>
 
               <a
-                href="mailto:your-email@example.com"
+                href="mailto:crypton.futuremedia1989@gmail.com"
                 aria-label="Email"
               >
                 <i className="fas fa-envelope"></i>
