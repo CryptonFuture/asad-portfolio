@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import '../css/Navbar.css'
 
 const links = [
   ["home", "Home"],
@@ -22,7 +23,9 @@ function Navbar() {
         .filter(Boolean);
 
       const current = sections.reduce((currentSection, section) => {
-        const top = Math.abs(section.getBoundingClientRect().top - 120);
+        const top = Math.abs(
+          section.getBoundingClientRect().top - 120
+        );
 
         if (!currentSection || top < currentSection.distance) {
           return {
@@ -55,10 +58,24 @@ function Navbar() {
   return (
     <header className="navbar">
       <div className="nav-container">
-        <button className="logo" onClick={() => scrollTo("home")}>
-          <span>Muhammad Asad Ali Akbar</span>
+
+        {/* ================= LOGO ================= */}
+        <button
+          className="logo"
+          onClick={() => scrollTo("home")}
+          aria-label="Muhammad Asad Ali Akbar"
+        >
+          <span className="ma-logo">
+            <span className="ma-m">M</span>
+            <span className="ma-a">A</span>
+          </span>
+
+          {/* <span className="logo-name">
+            Muhammad Asad Ali Akbar
+          </span> */}
         </button>
 
+        {/* ================= NAV LINKS ================= */}
         <nav className={menuOpen ? "nav-links open" : "nav-links"}>
           {links.map(([id, label]) => (
             <button
@@ -71,6 +88,7 @@ function Navbar() {
           ))}
         </nav>
 
+        {/* ================= MOBILE MENU ================= */}
         <button
           className="menu-btn"
           onClick={() => setMenuOpen((value) => !value)}
@@ -80,6 +98,7 @@ function Navbar() {
           <span />
           <span />
         </button>
+
       </div>
     </header>
   );

@@ -207,8 +207,9 @@ function Hero() {
             </a>
 
             <a
-              href="#contact"
+              href="https://classic-resume.vercel.app/"
               className="btn btn-outline"
+              target="_blank"
             >
               View Resume
             </a>

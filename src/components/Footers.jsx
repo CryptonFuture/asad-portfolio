@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import '../css/Footer.css'
 
 function Footers() {
   const currentYear = new Date().getFullYear();
@@ -42,8 +43,12 @@ useEffect(() => {
           >
 
             <a href="#home" className="footer-logo">
-              Muhammad Asad
-              <span>Ali Akbar</span>
+              <span className="footer-ma-logo">
+                <span className="footer-ma-m">M</span>
+                <span className="footer-ma-a">A</span>
+              </span>
+
+              
             </a>
 
             <p className="footer-description">
@@ -179,7 +184,7 @@ useEffect(() => {
                 <span>Email</span>
 
                 <a href="mailto:your-email@example.com">
-                  your-email@example.com
+                  crypton.futuremedia1989@gmail.com
                 </a>
               </div>
 
@@ -198,7 +203,7 @@ useEffect(() => {
                 <span>Phone</span>
 
                 <a href="tel:+923001234567">
-                  +92 300 1234567
+                  +92 322 2382819
                 </a>
               </div>
 
@@ -216,7 +221,7 @@ useEffect(() => {
               <div>
                 <span>Location</span>
 
-                <p>Karachi, Pakistan</p>
+                <p>House No: A-120 Sector 14-b Shadman Town</p>
               </div>
 
             </div>

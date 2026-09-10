@@ -1,61 +1,255 @@
-import { useState } from "react";
+
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import {
+  ExternalLink,
+  ArrowRight,
+  Sparkles,
+  ChevronLeft,
+  ChevronRight,
+  ServerCog
+} from "lucide-react";
+
+import Patient from "../assets/patient.png";
+import Expense from "../assets/expense.png";
+import Masjid from "../assets/masjid.png";
+import Inventory from "../assets/inventory.png";
+import Water from "../assets/water.jpeg";
+import Rfid from "../assets/rfid.jpeg";
+import Back from "../assets/Back.jpg"
+import Bus from "../assets/Bus.png"
+import Train from "../assets/train.png"
+import Flight from "../assets/flight.png"
+import Medical from "../assets/Medical.png"
+
+
+import "../css/Projects.css";
 
 const projects = [
   {
-    title: "AI Chat Application",
+    title: "Patient Tracker Application",
     category: "web",
     type: "Full Stack",
-    icon: "fas fa-comments",
+    image: Patient,
     description:
-      "AI-powered chat platform with authentication, conversations and scalable backend architecture.",
-    tech: ["React", "Node.js", "MongoDB", "Redis"],
+      "AI-powered patient tracking platform with authentication, conversations and scalable backend architecture.",
+    tech: [
+      "React",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Python",
+      "Flask",
+      "LLM",
+    ],
+    liveUrl: "https://patienttrackerfrontend.vercel.app/",
+    githubUrl: "https://github.com/CryptonFuture/patient_tracker_app",
   },
+
   {
-    title: "Authentication System",
-    category: "backend",
-    type: "Backend",
-    icon: "fas fa-user-shield",
+    title: "Masjid NearBy Application",
+    category: "web",
+    type: "Full Stack",
+    image: Masjid,
     description:
       "Secure authentication API with JWT access tokens, refresh tokens and role-based authorization.",
-    tech: ["Node.js", "Express", "JWT", "MongoDB"],
+    tech: [
+      "React",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "Python",
+      "Flask",
+      "LLM",
+    ],
+    liveUrl: "https://masjidnearbyfrontend.vercel.app/",
+    githubUrl: "https://github.com/CryptonFuture/masjid_nearby_app",
   },
+
   {
-    title: "Admin Dashboard",
+    title: "Expense Tracker Application",
     category: "web",
-    type: "Web Development",
-    icon: "fas fa-chart-line",
+    type: "Full Stack",
+    image: Expense,
     description:
       "Responsive analytics dashboard with charts, CRUD operations and REST API integration.",
-    tech: ["React", "Vite", "REST API", "Chart.js"],
+    tech: [
+      "React",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Python",
+      "Flask",
+      "LLM",
+    ],
+    liveUrl: "https://expensetrackerfrontend-nine.vercel.app/",
+    githubUrl: "https://github.com/yourusername/expense-tracker",
   },
+
   {
-    title: "Docker CI/CD Pipeline",
-    category: "backend",
-    type: "DevOps",
-    icon: "fab fa-docker",
+    title: "Inventory Management System",
+    category: "web",
+    type: "Full Stack",
+    image: Inventory,
     description:
       "Containerized Node.js application with Docker and automated GitHub Actions CI/CD.",
-    tech: ["Docker", "GitHub Actions", "Node.js"],
+    tech: [
+      "React",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Python",
+      "FastAPI",
+      "LLM",
+    ],
+    liveUrl: "https://invfrontend.vercel.app/",
+    githubUrl: "https://github.com/CryptonFuture/inventory_management_system",
   },
+
   {
-    title: "REST API Platform",
-    category: "backend",
-    type: "Backend",
-    icon: "fas fa-server",
+    title: "Water Planet Management System",
+    category: "web",
+    type: "Full Stack",
+    image: Water,
     description:
       "Scalable REST API with authentication, CRUD operations and MongoDB integration.",
-    tech: ["Node.js", "Express", "MongoDB", "JWT"],
+    tech: [
+      "React",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Python",
+      "FastAPI",
+      "LLM",
+    ],
+    liveUrl: "https://waterfrontend-eight.vercel.app/",
+    githubUrl: "https://github.com/CryptonFuture/water_planet_management_system",
   },
+
   {
-    title: "Developer Portfolio",
+    title: "RFID Management System",
     category: "web",
-    type: "Frontend",
-    icon: "fas fa-laptop-code",
+    type: "Full Stack",
+    image: Rfid,
     description:
-      "Modern responsive portfolio with animated sections, parallax effects and interactive UI.",
-    tech: ["React", "Vite", "CSS", "Three.js"],
+      "Modern RFID management system with real-time tag scanning, inventory tracking and scalable backend architecture.",
+    tech: [
+      "React",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Python",
+      "FastAPI",
+      "LLM",
+    ],
+    liveUrl: "https://rfidfrontend-two.vercel.app/",
+    githubUrl: "https://github.com/CryptonFuture/rfid_management_system",
   },
+
+    {
+    title: "Bus Ticketing System",
+    category: "web",
+    type: "Full Stack",
+    image: Bus,
+    description:
+      "A modern full-stack bus ticketing platform for managing routes, schedules, seat reservations, passenger bookings and ticket operations with a scalable backend architecture.",
+    tech: [
+      "React",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Python",
+      "FastAPI",
+      "LLM",
+    ],
+    liveUrl: "https://busticketfrontend.vercel.app/",
+    githubUrl: "https://github.com/CryptonFuture/Bus-Ticket",
+  },
+
+     {
+    title: "Train Ticketing System",
+    category: "web",
+    type: "Full Stack",
+    image: Train,
+    description:
+      "A modern full-stack bus ticketing platform for managing routes, schedules, seat reservations, passenger bookings and ticket operations with a scalable backend architecture.",
+    tech: [
+      "React",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Python",
+      "FastAPI",
+      "LLM",
+    ],
+    liveUrl: "https://trainticketfrontend.vercel.app/",
+    githubUrl: "https://github.com/CryptonFuture/train_ticketing_app",
+  },
+
+     {
+    title: "Flight Ticketing System",
+    category: "web",
+    type: "Full Stack",
+    image: Flight,
+    description:
+      "A modern full-stack bus ticketing platform for managing routes, schedules, seat reservations, passenger bookings and ticket operations with a scalable backend architecture.",
+    tech: [
+      "React",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Python",
+      "FastAPI",
+      "LLM",
+    ],
+    liveUrl: "https://flightticketfrontend.vercel.app/",
+    githubUrl: "https://github.com/CryptonFuture/flight_ticket_app",
+  },
+
+       {
+    title: "Ai Homeopathic Inventory System",
+    category: "web",
+    type: "Full Stack",
+    image: Medical,
+    description:
+      "AI-powered medicine inventory system that intelligently identifies medicines and displays real-time availability using smart status indicators.",
+    tech: [
+      "React",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Python",
+      "LangChain",
+      "LangGraph"
+    ],
+    liveUrl: "https://ai-homeopathic-inventory-frontend.vercel.app/",
+    githubUrl: "#",
+  },
+
+   {
+    title: "Backend",
+    category: "backend",
+    type: "backend",
+    image: Back,
+    description:
+      "Backend Development & API Engineering",
+    tech: [
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Postgresql",
+      "MySql",
+      "Mssql",
+      "Nest.js",
+      "Prisma",
+      "sequelize",
+      "Adonis.js",
+      "Knex"
+    ],
+  },
+  
+
+  // https://ai-homeopathic-inventory-frontend.vercel.app/
 ];
 
 const filters = [
@@ -67,187 +261,133 @@ const filters = [
 function Projects() {
   const [filter, setFilter] = useState("all");
 
+  // ============================================================
+  // Pagination
+  // ============================================================
+
+  const [currentPage, setCurrentPage] = useState(1);
+
+  // Projects per page
+  const projectsPerPage = 3;
+
+  // ============================================================
+  // Filter Projects
+  // ============================================================
+
   const filtered =
     filter === "all"
       ? projects
-      : projects.filter((project) => project.category === filter);
+      : projects.filter(
+          (project) => project.category === filter
+        );
+
+  // ============================================================
+  // Pagination Calculations
+  // ============================================================
+
+  const totalPages = Math.ceil(
+    filtered.length / projectsPerPage
+  );
+
+  const startIndex =
+    (currentPage - 1) * projectsPerPage;
+
+  const endIndex =
+    startIndex + projectsPerPage;
+
+  const paginatedProjects = filtered.slice(
+    startIndex,
+    endIndex
+  );
+
+  // ============================================================
+  // Reset Page When Filter Changes
+  // ============================================================
+
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [filter]);
+
+  // ============================================================
+  // Pagination Handlers
+  // ============================================================
+
+  const goToPage = (page) => {
+    setCurrentPage(page);
+
+    // Smooth scroll back to projects
+    document
+      .getElementById("projects")
+      ?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+  };
+
+  const nextPage = () => {
+    if (currentPage < totalPages) {
+      goToPage(currentPage + 1);
+    }
+  };
+
+  const previousPage = () => {
+    if (currentPage > 1) {
+      goToPage(currentPage - 1);
+    }
+  };
 
   return (
     <section id="projects" className="section projects">
       <div className="container">
 
-        {/* =========================
-            HEADING
-        ========================= */}
+        {/* Background decoration */}
+        <div className="projects-bg-orb projects-bg-orb-1" />
+        <div className="projects-bg-orb projects-bg-orb-2" />
+
+        {/* =====================================================
+            Heading
+        ====================================================== */}
 
         <motion.div
-          className="section-heading"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          className="section-heading projects-heading"
+          initial={{
+            opacity: 0,
+            y: 35,
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+          }}
+          viewport={{
+            once: true,
+          }}
+          transition={{
+            duration: 0.7,
+          }}
         >
-          <span>05</span>
-          <h2>My Projects</h2>
-          <p>Some things I've built</p>
+          <div className="heading-number">
+            <Sparkles size={15} />
+            <span>05</span>
+          </div>
+
+          <h2>
+            My <span>Projects</span>
+          </h2>
+
+          <p>
+            Some things I've built with modern technologies
+          </p>
         </motion.div>
 
-        {/* =========================
-            FILTERS
-        ========================= */}
+        {/* =====================================================
+            Filters
+        ====================================================== */}
 
         <motion.div
           className="project-filters"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-        >
-          {filters.map((item) => (
-            <button
-              key={item.id}
-              className={filter === item.id ? "active" : ""}
-              onClick={() => setFilter(item.id)}
-            >
-              {item.label}
-            </button>
-          ))}
-        </motion.div>
-
-        {/* =========================
-            PROJECT GRID
-        ========================= */}
-
-        <motion.div layout className="projects-grid">
-          <AnimatePresence mode="popLayout">
-            {filtered.map((project, index) => (
-              <motion.article
-                layout
-                key={project.title}
-                className="project-card"
-                initial={{
-                  opacity: 0,
-                  y: 35,
-                  scale: 0.96,
-                }}
-                animate={{
-                  opacity: 1,
-                  y: 0,
-                  scale: 1,
-                }}
-                exit={{
-                  opacity: 0,
-                  scale: 0.92,
-                  y: 20,
-                }}
-                transition={{
-                  duration: 0.45,
-                  delay: index * 0.06,
-                }}
-                whileHover={{
-                  y: -10,
-                }}
-              >
-
-                {/* =========================
-                    PROJECT IMAGE
-                ========================= */}
-
-                <div className="project-image">
-
-                  <div className="project-grid-pattern" />
-
-                  <div className="project-glow" />
-
-                  <span className="project-index">
-                    {String(index + 1).padStart(2, "0")}
-                  </span>
-
-                  <motion.div
-                    className="project-icon"
-                    whileHover={{
-                      scale: 1.15,
-                      rotate: 8,
-                    }}
-                  >
-                    <i className={project.icon} />
-                  </motion.div>
-
-                  <div className="project-type">
-                    {project.type}
-                  </div>
-
-                  {/* Overlay */}
-
-                  <div className="project-overlay">
-
-                    <motion.a
-                      href="#"
-                      className="project-action"
-                      aria-label={`View ${project.title}`}
-                      whileHover={{
-                        scale: 1.1,
-                        y: -3,
-                      }}
-                    >
-                      <i className="fas fa-external-link-alt" />
-                    </motion.a>
-
-                    <motion.a
-                      href="https://github.com/"
-                      target="_blank"
-                      rel="noreferrer"
-                      className="project-action"
-                      aria-label="GitHub"
-                      whileHover={{
-                        scale: 1.1,
-                        y: -3,
-                      }}
-                    >
-                      <i className="fab fa-github" />
-                    </motion.a>
-
-                  </div>
-                </div>
-
-                {/* =========================
-                    CONTENT
-                ========================= */}
-
-                <div className="project-content">
-
-                  <div className="project-category">
-                    <span />
-                    {project.type}
-                  </div>
-
-                  <h3>{project.title}</h3>
-
-                  <p>{project.description}</p>
-
-                  <div className="project-tech">
-                    {project.tech.map((tech) => (
-                      <span key={tech}>
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-
-                </div>
-              </motion.article>
-            ))}
-          </AnimatePresence>
-        </motion.div>
-
-        {/* =========================
-            CTA
-        ========================= */}
-
-        <motion.div
-          className="projects-cta"
           initial={{
             opacity: 0,
-            y: 25,
+            y: 20,
           }}
           whileInView={{
             opacity: 1,
@@ -260,26 +400,365 @@ function Projects() {
             duration: 0.6,
           }}
         >
+          {filters.map((item) => (
+            <button
+              key={item.id}
+              className={
+                filter === item.id ? "active" : ""
+              }
+              onClick={() => setFilter(item.id)}
+            >
+              {item.label}
+
+              {filter === item.id && (
+                <motion.span
+                  layoutId="activeFilter"
+                  className="filter-active-bg"
+                />
+              )}
+            </button>
+          ))}
+        </motion.div>
+
+        {/* =====================================================
+            Project Grid
+        ====================================================== */}
+
+        <motion.div
+          layout
+          className="projects-grid"
+        >
+          <AnimatePresence mode="popLayout">
+            {paginatedProjects.map(
+              (project, index) => (
+                <motion.article
+                  layout
+                  key={project.title}
+                  className="project-card"
+
+                  initial={{
+                    opacity: 0,
+                    y: 40,
+                    scale: 0.96,
+                  }}
+
+                  animate={{
+                    opacity: 1,
+                    y: 0,
+                    scale: 1,
+                  }}
+
+                  exit={{
+                    opacity: 0,
+                    y: 25,
+                    scale: 0.94,
+                  }}
+
+                  transition={{
+                    duration: 0.5,
+                    delay: index * 0.07,
+                  }}
+
+                  whileHover={{
+                    y: -12,
+                  }}
+                >
+
+                  {/* =================================================
+                      Image
+                  ================================================== */}
+
+                  <div className="project-image">
+
+                    <div className="project-image-grid" />
+
+                    <div className="project-image-glow" />
+
+                    <span className="project-number">
+                      {String(
+                        startIndex + index + 1
+                      ).padStart(2, "0")}
+                    </span>
+
+                    <motion.div
+                      className="project-image-inner"
+                      whileHover={{
+                        scale: 1.12,
+                      }}
+                      transition={{
+                        duration: 0.6,
+                        ease: "easeOut",
+                      }}
+                    >
+                      <img
+                        src={project.image}
+                        alt={project.title}
+                      />
+                    </motion.div>
+
+                    {/* Actions */}
+
+                    <div className="project-actions">
+
+                      <motion.a
+                        href={project.liveUrl}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="project-action"
+                        aria-label={`View ${project.title} Live`}
+                        whileHover={{
+                          scale: 1.12,
+                          y: -4,
+                        }}
+                        whileTap={{
+                          scale: 0.95,
+                        }}
+                      >
+                        <ExternalLink size={18} />
+                      </motion.a>
+
+                      <motion.a
+                        href={project.githubUrl}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="project-action"
+                        aria-label={`${project.title} GitHub`}
+                        whileHover={{
+                          scale: 1.12,
+                          y: -4,
+                        }}
+                        whileTap={{
+                          scale: 0.95,
+                        }}
+                      >
+                        <i className="fab fa-github" />
+                      </motion.a>
+
+                    </div>
+                  </div>
+
+                  {/* =================================================
+                      Content
+                  ================================================== */}
+
+                  <div className="project-content">
+
+                    <div className="project-category">
+                      <span />
+                      {project.type}
+                    </div>
+
+                    <h3>
+                      {project.title}
+                    </h3>
+
+                    <p>
+                      {project.description}
+                    </p>
+
+                    <div className="project-tech">
+                      {project.tech.map(
+                        (tech) => (
+                          <span key={tech}>
+                            {tech}
+                          </span>
+                        )
+                      )}
+                    </div>
+
+                    <div className="project-card-footer">
+
+                      <span>
+                        View Project
+                      </span>
+
+                      <ArrowRight size={17} />
+
+                    </div>
+
+                  </div>
+
+                </motion.article>
+              )
+            )}
+          </AnimatePresence>
+        </motion.div>
+
+        {/* =====================================================
+            Pagination
+        ====================================================== */}
+
+        {totalPages > 1 && (
+          <motion.div
+            className="projects-pagination"
+
+            initial={{
+              opacity: 0,
+              y: 20,
+            }}
+
+            whileInView={{
+              opacity: 1,
+              y: 0,
+            }}
+
+            viewport={{
+              once: true,
+            }}
+
+            transition={{
+              duration: 0.6,
+            }}
+          >
+
+            {/* Previous */}
+
+            <button
+              className="pagination-btn pagination-prev"
+              onClick={previousPage}
+              disabled={currentPage === 1}
+              aria-label="Previous page"
+            >
+              <ChevronLeft size={18} />
+              <span>Previous</span>
+            </button>
+
+            {/* Page Numbers */}
+
+            <div className="pagination-numbers">
+
+              {Array.from(
+                { length: totalPages },
+                (_, index) => index + 1
+              ).map((page) => (
+
+                <button
+                  key={page}
+                  className={
+                    currentPage === page
+                      ? "active"
+                      : ""
+                  }
+                  onClick={() =>
+                    goToPage(page)
+                  }
+                >
+                  {String(page).padStart(2, "0")}
+                </button>
+
+              ))}
+
+            </div>
+
+            {/* Next */}
+
+            <button
+              className="pagination-btn pagination-next"
+              onClick={nextPage}
+              disabled={
+                currentPage === totalPages
+              }
+              aria-label="Next page"
+            >
+              <span>Next</span>
+              <ChevronRight size={18} />
+            </button>
+
+          </motion.div>
+        )}
+
+        {/* =====================================================
+            Pagination Info
+        ====================================================== */}
+
+        {/* {filtered.length > 0 && (
+          <motion.div
+            className="pagination-info"
+
+            initial={{
+              opacity: 0,
+            }}
+
+            animate={{
+              opacity: 1,
+            }}
+          >
+            Showing{" "}
+            <strong>
+              {startIndex + 1}
+            </strong>{" "}
+            -{" "}
+            <strong>
+              {Math.min(
+                endIndex,
+                filtered.length
+              )}
+            </strong>{" "}
+            of{" "}
+            <strong>
+              {filtered.length}
+            </strong>{" "}
+            projects
+          </motion.div>
+        )} */}
+
+        {/* =====================================================
+            CTA
+        ====================================================== */}
+
+        <motion.div
+          className="projects-cta"
+
+          initial={{
+            opacity: 0,
+            y: 30,
+          }}
+
+          whileInView={{
+            opacity: 1,
+            y: 0,
+          }}
+
+          viewport={{
+            once: true,
+          }}
+
+          transition={{
+            duration: 0.7,
+          }}
+        >
+
+          <div className="projects-cta-icon">
+            <i className="fab fa-github" />
+          </div>
+
           <div className="projects-cta-text">
-            <span>MORE PROJECTS</span>
+
+            <span>
+              MORE PROJECTS
+            </span>
 
             <p>
               Want to explore more of my work?
             </p>
+
           </div>
 
           <a
-            href="https://github.com/"
+            href="https://github.com/cryptonfuture"
             target="_blank"
             rel="noreferrer"
             className="github-btn"
           >
             <i className="fab fa-github" />
 
-            <span>View My GitHub</span>
+            <span>
+              View My GitHub
+            </span>
 
-            <i className="fas fa-arrow-right" />
+            <ArrowRight size={17} />
           </a>
+
         </motion.div>
 
       </div>
@@ -288,3 +767,5 @@ function Projects() {
 }
 
 export default Projects;
+
+

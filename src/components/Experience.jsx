@@ -4,16 +4,16 @@ const experience = [
   {
     year: "2023 — Present",
     title: "Senior MERN Stack Developer",
-    company: "Software Development",
+    company: "QBS.CO",
     description:
       "Developing scalable full-stack applications using React, Node.js, Express.js and MongoDB. Working on modern architectures, REST APIs, authentication and deployment workflows.",
     icon: "fas fa-code",
     skills: ["React", "Node.js", "Express.js", "MongoDB"],
   },
   {
-    year: "2023",
+    year: "2020-2022",
     title: "Associate Frontend Developer",
-    company: "QBS.CO",
+    company: "Bitwits",
     description:
       "Worked on responsive frontend applications, reusable components, API integrations and modern user interfaces using React and JavaScript.",
     icon: "fas fa-laptop-code",

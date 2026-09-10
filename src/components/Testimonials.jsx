@@ -3,21 +3,21 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const testimonials = [
   {
-    name: "Client One",
-    role: "Business Owner",
-    text: "Great developer with strong technical skills and excellent communication.",
+    name: "Hiba Siddiqui",
+    role: "Team Lead & Project Manager",
+    text: "Hiba Siddiqui has been an incredible Team Lead and Project Manager throughout my professional journey. She consistently supported me, guided me through challenging situations, and helped me grow both technically and professionally. I truly appreciate her leadership, encouragement, and the trust she placed in my abilities. I’m genuinely grateful for all the support and guidance she has given me.",
     rating: 5,
   },
   {
-    name: "Client Two",
-    role: "Startup Founder",
-    text: "The project was delivered professionally with a clean and modern interface.",
+    name: "Owais Ali Khan",
+    role: "Team Lead & Project Manager",
+    text: "Owais Ali Khan has been an exceptional Team Lead and Project Manager who consistently supported and guided me throughout our work. His leadership, encouragement, and valuable guidance helped me overcome challenges and grow professionally. I truly appreciate his support, trust, and the positive impact he has had on my professional journey.",
     rating: 5,
   },
   {
-    name: "Client Three",
-    role: "Product Manager",
-    text: "Very reliable and knowledgeable full-stack developer.",
+    name: "Shayan Sherwani",
+    role: "Manager",
+    text: "Shayan Sherwani has been a supportive and inspiring manager throughout my professional journey. She always supported and encouraged me, especially during challenging situations, and provided valuable guidance that helped me grow both professionally and personally. I truly appreciate her support, trust, and encouragement, and I’m grateful for the positive impact she has had on my career.",
     rating: 5,
   },
 ];

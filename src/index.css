@@ -1134,27 +1134,19 @@ button {
 ========================================= */
 
 .skills-stats {
-  position: relative;
-  z-index: 2;
+  width: 100%;
 
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 
-  margin-top: 60px;
+  gap: 20px;
 
-  border: 1px solid rgba(255, 255, 255, 0.07);
-  border-radius: 20px;
+  margin: 45px auto 0;
 
-  background:
-    linear-gradient(
-      135deg,
-      rgba(255, 255, 255, 0.04),
-      rgba(255, 255, 255, 0.015)
-    );
+  align-items: center;
+  justify-items: center;
 
-  backdrop-filter: blur(20px);
-
-  overflow: hidden;
+  text-align: center;
 }
 
 /* =========================================
@@ -1322,11 +1314,44 @@ button {
 .experience-timeline {
   position: relative;
 
-  max-width: 950px;
+  width: 100%;
+  max-width: 1220px;
 
   margin: 70px auto 0;
 
   padding: 10px 0;
+
+  box-sizing: border-box;
+}
+
+.experience-item {
+  position: relative;
+
+  width: 50%;
+
+  box-sizing: border-box;
+
+  margin-bottom: 70px;
+}
+
+/* Left Card */
+
+.experience-item.timeline-left {
+  padding-right: 45px;
+
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Right Card */
+
+.experience-item.timeline-right {
+  margin-left: 50%;
+
+  padding-left: 45px;
+
+  display: flex;
+  justify-content: flex-start;
 }
 
 /* Center Line */
@@ -1485,7 +1510,12 @@ button {
 .experience-card {
   position: relative;
 
-  padding: 27px;
+  width: 580px;
+  max-width: 100%;
+
+  box-sizing: border-box;
+
+  padding: 28px;
 
   border: 1px solid rgba(255, 255, 255, 0.07);
 
@@ -1503,11 +1533,26 @@ button {
   overflow: hidden;
 
   text-align: left;
-
-  transition:
-    border-color 0.3s ease,
-    box-shadow 0.3s ease;
 }
+
+.experience-grid {
+  width: 100%;
+  max-width: 1220px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 580px));
+
+  justify-content: center;
+
+  gap: 24px;
+
+  box-sizing: border-box;
+}
+
+
 
 .experience-card::before {
   content: "";
@@ -1790,6 +1835,24 @@ button {
 /* =========================================
    RESPONSIVE
 ========================================= */
+
+@media (max-width: 620px) {
+  .experience-grid {
+    grid-template-columns: minmax(0, 1fr);
+
+    width: 100%;
+
+    padding: 0 15px;
+  }
+
+  .experience-card {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+
+    padding: 22px;
+  }
+}
 
 @media (max-width: 800px) {
   .experience-timeline {
@@ -3153,11 +3216,9 @@ button {
 
   color: #d4dce1;
 
-  font-size: 20px;
-
-  line-height: 1.8;
-
-  font-weight: 400;
+   font-size: 18px;
+  line-height: 1.7;
+  font-weight: 500;
 }
 
 /* =========================================
@@ -4406,22 +4467,17 @@ button {
   margin-bottom: 0;
 }
 
-/* Left */
-
 .timeline-left {
-  padding-right: 55px;
+  padding-right: 45px;
 
   justify-content: flex-end;
 }
 
-/* Right */
-
 .timeline-right {
   margin-left: 50%;
 
-  padding-left: 55px;
+  padding-left: 45px;
 }
-
 /* =========================================
    NUMBER
 ========================================= */
@@ -4512,8 +4568,6 @@ button {
 
   width: 100%;
 
-  padding: 28px;
-
   border: 1px solid rgba(255, 255, 255, 0.07);
 
   border-radius: 20px;
@@ -4528,6 +4582,10 @@ button {
   backdrop-filter: blur(18px);
 
   overflow: hidden;
+
+  min-width: 580px;
+
+  padding: 30px 32px;
 
   transition:
     border-color 0.3s ease,
@@ -5773,34 +5831,39 @@ html {
 /* Heading */
 
 .knowledge-heading {
-  text-align: center;
-  max-width: 700px;
-  margin: 0 auto 70px;
+  width: 100%;
+  max-width: 1220px;
+  margin: 0 auto 50px;
+  text-align: left;
 }
 
-.knowledge-heading > span {
-  display: inline-block;
-  margin-bottom: 12px;
-  font-size: 12px;
-  letter-spacing: 4px;
-  font-weight: 700;
-  opacity: 0.7;
+.knowledge-heading span {
+  display: block;
+  text-align: left;
 }
 
 .knowledge-heading h2 {
+  text-align: left;
+  margin-left: 0;
   font-size: clamp(36px, 5vw, 58px);
-  margin: 0;
+}
+
+.knowledge-heading p {
+  text-align: left;
+  margin-left: 0;
+  font-size: 13px;
+  color: var(--muted);
 }
 
 .knowledge-heading strong {
   color: #00e5c3;
 }
 
-.knowledge-heading p {
+/* .knowledge-heading p {
   margin-top: 18px;
   opacity: 0.65;
   line-height: 1.8;
-}
+} */
 
 /* =========================================
    GRAPH
@@ -6510,3 +6573,56 @@ html {
     transform: translateY(0);
   }
 }
+
+.skill-category {
+  margin-bottom: 70px;
+}
+
+.skill-category:last-child {
+  margin-bottom: 0;
+}
+
+.skill-category-heading {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.category-number {
+  color: #00e5ff;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.skill-category-heading h3 {
+  margin: 0;
+  color: #fff;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.category-line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 229, 255, 0.6),
+    transparent
+  );
+}
+
+@media (max-width: 768px) {
+  .skill-category-heading h3 {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 500px) {
+  .category-line {
+    display: none;
+  }
+}
+
+

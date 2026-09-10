@@ -131,7 +131,7 @@ function Contact() {
                   <span>Email</span>
 
                   <strong>
-                    your@email.com
+                    crypton.futuremedia1989@gmail.com
                   </strong>
                 </div>
 
@@ -149,7 +149,7 @@ function Contact() {
                   <span>Location</span>
 
                   <strong>
-                    Pakistan
+                    House No: A-120 Sector 14-b Shadman Town
                   </strong>
                 </div>
               </div>
@@ -162,10 +162,10 @@ function Contact() {
                 </div>
 
                 <div>
-                  <span>Response Time</span>
+                  <span>Contact No</span>
 
                   <strong>
-                    Usually within 24 hours
+                    03222382819
                   </strong>
                 </div>
               </div>

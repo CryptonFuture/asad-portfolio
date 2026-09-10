@@ -1,19 +1,36 @@
 import { motion } from "framer-motion";
 
 const educationData = [
-  {
-    year: "2018 — 2022",
-    degree: "Bachelor of Science in Computer Science",
-    institute: "University of Karachi — UBIT",
+   {
+    year: "Professional Certification",
+    degree: "Professional Certification in Software Engineering",
+    institute: "Sir Syed University of Engineering & Technology",
     description:
-      "Studied Computer Science with a focus on software development, web technologies, databases, algorithms and modern application development.",
-    icon: "fas fa-graduation-cap",
+      "Completed professional certification focused on software engineering, programming concepts, application development and modern technology practices.",
+    icon: "fas fa-certificate",
     tags: [
-      "Computer Science",
-      "Software Development",
-      "Web Development",
+      "Software Engineering",
+      "Programming",
+      "Application Development",
+      "Technology",
     ],
   },
+
+  {
+    year: "Bachelor of Commerce",
+    degree: "Bachelor of Commerce (B.Com)",
+    institute: "University / College",
+    description:
+      "Studied commerce, accounting, business management, economics and fundamental business practices.",
+      icon: "fas fa-graduation-cap",
+    tags: [
+      "Commerce",
+      "Accounting",
+      "Business",
+      "Management",
+    ],
+  },
+
   {
     year: "Professional Development",
     degree: "Full Stack Web Development",
