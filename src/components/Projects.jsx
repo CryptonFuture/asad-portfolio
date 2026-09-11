@@ -21,6 +21,7 @@ import Bus from "../assets/Bus.png"
 import Train from "../assets/train.png"
 import Flight from "../assets/flight.png"
 import Medical from "../assets/Medical.png"
+import Lucky from "../assets/Lucky.jpeg"
 
 
 import "../css/Projects.css";
@@ -225,6 +226,27 @@ const projects = [
     liveUrl: "https://ai-homeopathic-inventory-frontend.vercel.app/",
     githubUrl: "#",
   },
+
+  {
+    title: "Lucky Draw Application",
+    category: "web",
+    type: "Full Stack",
+    image: Lucky,
+    description:
+      "AI-powered medicine inventory system that intelligently identifies medicines and displays real-time availability using smart status indicators.",
+    tech: [
+      "React",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Python",
+      "LangChain",
+      "LangGraph"
+    ],
+    liveUrl: "https://luckyfrontend.vercel.app/",
+    githubUrl: "https://github.com/CryptonFuture/lucky_draw_backend",
+  },
+
 
    {
     title: "Backend",
