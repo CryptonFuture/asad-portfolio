@@ -22,7 +22,9 @@ import Train from "../assets/train.png"
 import Flight from "../assets/flight.png"
 import Medical from "../assets/Medical.png"
 import Lucky from "../assets/Lucky.jpeg"
-
+import Visa from "../assets/visa.jpeg"
+import POS from "../assets/POS.jpeg"
+import ERP from "../assets/erp.jpeg"
 
 import "../css/Projects.css";
 
@@ -215,13 +217,13 @@ const projects = [
     description:
       "AI-powered medicine inventory system that intelligently identifies medicines and displays real-time availability using smart status indicators.",
     tech: [
-      "React",
+     "React",
       "Node.js",
       "Express.js",
       "MongoDB",
       "Python",
-      "LangChain",
-      "LangGraph"
+      "FastApi",
+      "LLM"
     ],
     liveUrl: "https://ai-homeopathic-inventory-frontend.vercel.app/",
     githubUrl: "#",
@@ -235,18 +237,77 @@ const projects = [
     description:
       "AI-powered medicine inventory system that intelligently identifies medicines and displays real-time availability using smart status indicators.",
     tech: [
-      "React",
+     "React",
       "Node.js",
       "Express.js",
       "MongoDB",
       "Python",
-      "LangChain",
-      "LangGraph"
+      "FastApi",
+      "LLM"
     ],
     liveUrl: "https://luckyfrontend.vercel.app/",
     githubUrl: "https://github.com/CryptonFuture/lucky_draw_backend",
   },
 
+    {
+    title: "Visa Management System",
+    category: "web",
+    type: "Full Stack",
+    image: Visa,
+    description:
+      "AI-powered medicine inventory system that intelligently identifies medicines and displays real-time availability using smart status indicators.",
+    tech: [
+      "React",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Python",
+      "FastApi",
+      "LLM"
+    ],
+    liveUrl: "https://visafrontend-three.vercel.app/",
+    githubUrl: "https://github.com/CryptonFuture/visa_management_system",
+  },
+
+    {
+    title: "POS Management System",
+    category: "web",
+    type: "Full Stack",
+    image: POS,
+    description:
+      "AI-powered medicine inventory system that intelligently identifies medicines and displays real-time availability using smart status indicators.",
+    tech: [
+      "React",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Python",
+      "FastApi",
+      "LLM"
+    ],
+    liveUrl: "https://posfrontend-dun.vercel.app/",
+    githubUrl: "https://github.com/CryptonFuture/pos_management_system",
+  },
+
+    {
+    title: "ERP Management System",
+    category: "web",
+    type: "Full Stack",
+    image: ERP,
+    description:
+      "AI-powered medicine inventory system that intelligently identifies medicines and displays real-time availability using smart status indicators.",
+    tech: [
+      "React",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Python",
+      "FastApi",
+      "LLM"
+    ],
+    liveUrl: "https://erpfrontend-two.vercel.app/",
+    githubUrl: "https://github.com/CryptonFuture/erp_management_system",
+  },
 
    {
     title: "Backend",
