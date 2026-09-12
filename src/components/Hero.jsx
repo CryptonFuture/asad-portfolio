@@ -207,9 +207,10 @@ function Hero() {
             </a>
 
             <a
-              href="https://classic-resume.vercel.app/"
+              href="/Muhammad_Asad_Resume.pdf"
               className="btn btn-outline"
               target="_blank"
+              rel="noreferrer"
             >
               View Resume
             </a>

@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import Asad from '../assets/Asa.png'
-
 function About() {
   return (
     <section id="about" className="section about">
@@ -209,8 +208,7 @@ function About() {
             </div>
             <div className="about-actions">
               <a
-                href="/resume.pdf"
-                download="Muhammad-Asad-Ali-Akbar-Resume.pdf"
+                href="/Muhammad_Asad_Resume.pdf"
                 className="resume-btn"
               >
                 <i className="fas fa-download" />
