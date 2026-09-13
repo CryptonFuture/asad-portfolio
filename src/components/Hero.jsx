@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import Asad from '../assets/Asa.png'
+// import Asad from '../assets/As.jpeg'
 
 const roles = [
   "Full Stack Developer",

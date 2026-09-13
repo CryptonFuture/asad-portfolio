@@ -25,6 +25,9 @@ import Lucky from "../assets/Lucky.jpeg"
 import Visa from "../assets/visa.jpeg"
 import POS from "../assets/POS.jpeg"
 import ERP from "../assets/erp.jpeg"
+import Account from "../assets/account.jpeg"
+import Banking from "../assets/Banking.jpeg"
+
 
 import "../css/Projects.css";
 
@@ -308,6 +311,48 @@ const projects = [
     liveUrl: "https://erpfrontend-two.vercel.app/",
     githubUrl: "https://github.com/CryptonFuture/erp_management_system",
   },
+
+     {
+    title: "Accounting Application",
+    category: "web",
+    type: "Full Stack",
+    image: Account,
+    description:
+      "AI-powered medicine inventory system that intelligently identifies medicines and displays real-time availability using smart status indicators.",
+    tech: [
+      "React",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Python",
+      "FastApi",
+      "LLM"
+    ],
+    liveUrl: "https://accountfrontend.vercel.app/",
+    githubUrl: "https://github.com/CryptonFuture/accounting_app",
+  },
+
+   {
+    title: "Banking Application",
+    category: "web",
+    type: "Full Stack",
+    image: Banking,
+    description:
+      "AI-powered medicine inventory system that intelligently identifies medicines and displays real-time availability using smart status indicators.",
+    tech: [
+      "React",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Python",
+      "FastApi",
+      "LLM"
+    ],
+    liveUrl: "https://bankingfrontend-pied.vercel.app/",
+    githubUrl: "https://github.com/CryptonFuture/banking_app",
+  },
+
+  
 
    {
     title: "Backend",
