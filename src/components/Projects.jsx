@@ -128,7 +128,7 @@ const projects = [
       "FastAPI",
       "LLM",
     ],
-    liveUrl: "https://waterfrontend-eight.vercel.app/",
+    liveUrl: "https://waterfrontend-three.vercel.app/",
     githubUrl: "https://github.com/CryptonFuture/water_planet_management_system",
   },
 
