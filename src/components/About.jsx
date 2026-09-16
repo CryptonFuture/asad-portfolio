@@ -208,7 +208,7 @@ function About() {
             </div>
             <div className="about-actions">
               <a
-                href="/Muhammad_Asad_Resumes.pdf"
+                href="/Resume.pdf"
                 className="resume-btn"
               >
                 <i className="fas fa-download" />

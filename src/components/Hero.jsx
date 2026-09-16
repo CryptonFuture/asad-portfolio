@@ -208,7 +208,7 @@ function Hero() {
             </a>
 
             <a
-              href="/Muhammad_Asad_Resumes.pdf"
+              href="/Resume.pdf"
               className="btn btn-outline"
               target="_blank"
               rel="noreferrer"
