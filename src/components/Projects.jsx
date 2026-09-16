@@ -27,7 +27,8 @@ import POS from "../assets/POS.jpeg"
 import ERP from "../assets/erp.jpeg"
 import Account from "../assets/account.jpeg"
 import Banking from "../assets/Banking.jpeg"
-
+import Qibla from "../assets/qibla.jpeg"
+import Blood from "../assets/blood.jpeg"
 
 import "../css/Projects.css";
 
@@ -352,6 +353,45 @@ const projects = [
     githubUrl: "https://github.com/CryptonFuture/banking_app",
   },
 
+   {
+    title: "Qibla Application",
+    category: "web",
+    type: "Full Stack",
+    image: Qibla,
+    description:
+      "AI-powered medicine inventory system that intelligently identifies medicines and displays real-time availability using smart status indicators.",
+    tech: [
+      "React",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Python",
+      "FastApi",
+      "LLM"
+    ],
+    liveUrl: "https://qiblafrontend.vercel.app/",
+    githubUrl: "https://github.com/CryptonFuture/qibla_app",
+  },
+
+   {
+    title: "Blood Bank Application",
+    category: "web",
+    type: "Full Stack",
+    image: Blood,
+    description:
+      "AI-powered medicine inventory system that intelligently identifies medicines and displays real-time availability using smart status indicators.",
+    tech: [
+      "React",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Python",
+      "FastApi",
+      "LLM"
+    ],
+    liveUrl: "https://bloodfrontend-six.vercel.app/",
+    githubUrl: "https://github.com/CryptonFuture/blood_bank_management_system",
+  },
   
 
    {
@@ -375,9 +415,6 @@ const projects = [
       "Knex"
     ],
   },
-  
-
-  // https://ai-homeopathic-inventory-frontend.vercel.app/
 ];
 
 const filters = [
