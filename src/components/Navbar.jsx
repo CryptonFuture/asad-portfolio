@@ -1,5 +1,6 @@
+
 import { useEffect, useState } from "react";
-import '../css/Navbar.css'
+import "../css/Navbar.css";
 
 const links = [
   ["home", "Home"],
@@ -15,9 +16,13 @@ const links = [
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [active, setActive] = useState("home");
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
+      // Background only appears after scrolling
+      setScrolled(window.scrollY > 35);
+
       const sections = links
         .map(([id]) => document.getElementById(id))
         .filter(Boolean);
@@ -42,21 +47,29 @@ function Navbar() {
       }
     };
 
-    window.addEventListener("scroll", handleScroll);
+    handleScroll();
 
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, {
+      passive: true,
+    });
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
   const scrollTo = (id) => {
     document.getElementById(id)?.scrollIntoView({
       behavior: "smooth",
+      block: "start",
     });
 
+    setActive(id);
     setMenuOpen(false);
   };
 
   return (
-    <header className="navbar">
+    <header className={`navbar ${scrolled ? "navbar-scrolled" : ""}`}>
       <div className="nav-container">
 
         {/* ================= LOGO ================= */}
@@ -69,30 +82,27 @@ function Navbar() {
             <span className="ma-m">M</span>
             <span className="ma-a">A</span>
           </span>
-
-          {/* <span className="logo-name">
-            Muhammad Asad Ali Akbar
-          </span> */}
         </button>
 
         {/* ================= NAV LINKS ================= */}
-        <nav className={menuOpen ? "nav-links open" : "nav-links"}>
+        <nav className={`nav-links ${menuOpen ? "open" : ""}`}>
           {links.map(([id, label]) => (
             <button
               key={id}
               className={active === id ? "active" : ""}
               onClick={() => scrollTo(id)}
             >
-              {label}
+              <span>{label}</span>
             </button>
           ))}
         </nav>
 
         {/* ================= MOBILE MENU ================= */}
         <button
-          className="menu-btn"
+          className={`menu-btn ${menuOpen ? "menu-open" : ""}`}
           onClick={() => setMenuOpen((value) => !value)}
           aria-label="Toggle navigation"
+          aria-expanded={menuOpen}
         >
           <span />
           <span />
@@ -105,3 +115,4 @@ function Navbar() {
 }
 
 export default Navbar;
+

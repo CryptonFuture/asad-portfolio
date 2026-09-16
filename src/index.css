@@ -96,82 +96,9 @@ button {
     );
 }
 
-/* NAVBAR */
 
-.navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 100;
-  padding: 18px 20px;
-  background: rgba(5, 11, 13, 0.72);
-  backdrop-filter: blur(18px);
-  border-bottom: 1px solid rgba(255,255,255,0.04);
-}
 
-.nav-container {
-  width: min(1180px, 100%);
-  margin: auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
 
-.logo {
-  background: transparent;
-  color: white;
-  font-size: 24px;
-  font-weight: 800;
-}
-
-.logo span {
-  color: var(--primary);
-}
-
-.nav-links {
-  display: flex;
-  gap: 6px;
-}
-
-.nav-links button {
-  position: relative;
-  padding: 10px 13px;
-  background: transparent;
-  color: var(--muted);
-  transition: 0.3s;
-}
-
-.nav-links button:hover,
-.nav-links button.active {
-  color: var(--primary);
-}
-
-.nav-links button.active::after {
-  content: "";
-  position: absolute;
-  left: 13px;
-  right: 13px;
-  bottom: 2px;
-  height: 2px;
-  background: var(--primary);
-  border-radius: 20px;
-}
-
-.menu-btn {
-  display: none;
-  width: 42px;
-  height: 42px;
-  background: transparent;
-}
-
-.menu-btn span {
-  display: block;
-  width: 25px;
-  height: 2px;
-  margin: 5px auto;
-  background: var(--primary);
-}
 
 /* HERO */
 
