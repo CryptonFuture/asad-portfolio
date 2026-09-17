@@ -208,7 +208,7 @@ function Hero() {
             </a>
 
             <a
-              href="/CV.pdf"
+              href="/Muhammad_Asad_Mern.pdf"
               className="btn btn-outline"
               target="_blank"
               rel="noreferrer"
@@ -225,7 +225,7 @@ function Hero() {
           <div className="social-links">
 
             <a
-              href="https://github.com/cryptonfuture"
+              href="https://github.com/MuhammadAsadAliAkbar"
               target="_blank"
               rel="noreferrer"
               aria-label="GitHub"

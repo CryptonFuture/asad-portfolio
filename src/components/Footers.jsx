@@ -59,7 +59,7 @@ useEffect(() => {
             <div className="footer-socials">
 
               <a
-                href="https://github.com/cryptonfuture"
+                href="https://github.com/MuhammadAsadAliAkbar"
                 target="_blank"
                 rel="noreferrer"
                 aria-label="GitHub"
