@@ -29,6 +29,7 @@ import Account from "../assets/account.jpeg"
 import Banking from "../assets/Banking.jpeg"
 import Qibla from "../assets/qibla.jpeg"
 import Blood from "../assets/blood.jpeg"
+import Pandemic from "../assets/Pandemic.jpeg"
 
 import "../css/Projects.css";
 
@@ -391,6 +392,26 @@ const projects = [
     ],
     liveUrl: "https://bloodfrontend-six.vercel.app/",
     githubUrl: "https://github.com/CryptonFuture/blood_bank_management_system",
+  },
+
+     {
+    title: "Pandemic Tracker Application",
+    category: "web",
+    type: "Full Stack",
+    image: Pandemic,
+    description:
+      "AI-powered medicine inventory system that intelligently identifies medicines and displays real-time availability using smart status indicators.",
+    tech: [
+      "React",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Python",
+      "FastApi",
+      "LLM"
+    ],
+    liveUrl: "https://pandemicfrontend.vercel.app/",
+    githubUrl: "https://github.com/CryptonFuture/Pandemic_Tracker",
   },
   
 

@@ -208,7 +208,7 @@ function Hero() {
             </a>
 
             <a
-              href="/Resume.pdf"
+              href="/CV.pdf"
               className="btn btn-outline"
               target="_blank"
               rel="noreferrer"
